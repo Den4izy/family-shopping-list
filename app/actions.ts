@@ -22,7 +22,7 @@ export async function addShoppingItem(formData: FormData) {
     status: "active",
   });
 
-  revalidatePath("/");
+  revalidatePath("/shopping");
 }
 
 export async function markShoppingItemPurchased(formData: FormData) {
@@ -40,7 +40,7 @@ export async function markShoppingItemPurchased(formData: FormData) {
     })
     .where(and(eq(shoppingItems.id, id), eq(shoppingItems.status, "active")));
 
-  revalidatePath("/");
+  revalidatePath("/shopping");
 }
 
 export async function deletePurchasedItem(formData: FormData) {
@@ -54,5 +54,5 @@ export async function deletePurchasedItem(formData: FormData) {
     .delete(shoppingItems)
     .where(and(eq(shoppingItems.id, id), eq(shoppingItems.status, "purchased")));
 
-  revalidatePath("/");
+  revalidatePath("/shopping");
 }

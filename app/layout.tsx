@@ -13,9 +13,9 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Сімейний список покупок",
+  title: "Сімейний сайт",
   description:
-    "Простий онлайн-список покупок для сім'ї: додавайте товари, позначайте куплене та зберігайте історію.",
+    "Головна сторінка сімейного сайту з меню для покупок і сімейної галереї.",
   icons: {
     icon: "/favicon.svg",
     shortcut: "/favicon.svg",
